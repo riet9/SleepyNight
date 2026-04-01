@@ -1,4 +1,4 @@
-param(
+﻿param(
     [switch]$Install,
     [switch]$Ui,
     [switch]$Desktop,
@@ -21,7 +21,7 @@ if ($Ui) {
 }
 
 if ($Desktop) {
-    $desktopExe = Join-Path $PSScriptRoot "dist\SleepyNight.Desktop\SleepyNight.Desktop.exe"
+    $desktopExe = Join-Path $PSScriptRoot "dist\SleepyNight\SleepyNight.exe"
     if (-not (Test-Path $desktopExe)) {
         throw "Desktop exe not found. Build it first with .\build-desktop.ps1"
     }

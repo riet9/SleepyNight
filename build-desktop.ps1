@@ -3,7 +3,7 @@
 )
 
 $projectPath = Join-Path $PSScriptRoot "SleepyNight.Desktop\SleepyNight.Desktop.csproj"
-$outputPath = Join-Path $PSScriptRoot "dist\SleepyNight.Desktop"
+$outputPath = Join-Path $PSScriptRoot "dist\SleepyNight"
 
 if (-not (Test-Path $projectPath)) {
     throw "Desktop project not found: $projectPath"
@@ -36,6 +36,12 @@ Copy-Item `
     -Destination (Join-Path $env:APPDATA "NuGet\NuGet.Config") `
     -Force
 
+if (Test-Path $outputPath) {
+    Remove-Item -LiteralPath $outputPath -Recurse -Force
+}
+
+New-Item -ItemType Directory -Force -Path $outputPath | Out-Null
+
 dotnet publish $projectPath `
     -c $Configuration `
     -r win-x64 `
@@ -49,3 +55,5 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Host "Desktop build published to:"
 Write-Host " - $outputPath"
+Write-Host "Main exe:"
+Write-Host " - " (Join-Path $outputPath "SleepyNight.exe")

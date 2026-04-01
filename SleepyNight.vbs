@@ -10,7 +10,7 @@ Set shell = CreateObject("WScript.Shell")
 Set fso = CreateObject("Scripting.FileSystemObject")
 
 rootPath = fso.GetParentFolderName(WScript.ScriptFullName)
-exePath = rootPath & "\dist\SleepyNight.Desktop\SleepyNight.Desktop.exe"
+exePath = rootPath & "\dist\SleepyNight\SleepyNight.exe"
 
 If fso.FileExists(exePath) Then
     shell.Run """" & exePath & """", 0, False
