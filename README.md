@@ -20,7 +20,7 @@ Default schedule:
 
 - weekdays: `20:30 -> 03:00`
 - weekends: `22:30 -> 04:00`
-- 
+  
 ![UI](Images/app.png)
 
 ## Tech Stack
