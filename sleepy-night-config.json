@@ -1,0 +1,34 @@
+﻿{
+    "emergencyCode":  "",
+    "statusRefreshSeconds":  5,
+    "messageTitle":  "SleepyNight",
+    "warningMinutes":  [
+                           60,
+                           30,
+                           15,
+                           10,
+                           5,
+                           1
+                       ],
+    "schedule":  {
+                     "weekdays":  {
+                                      "start":  "20:30",
+                                      "end":  "03:00"
+                                  },
+                     "weekends":  {
+                                      "start":  "22:30",
+                                      "end":  "04:00"
+                                  },
+                     "useWeekendSchedule":  true
+                 },
+    "watchdogEnabled":  true,
+    "graceMinutes":  2,
+    "watchdogRepairCooldownSeconds":  90,
+    "enforcementMode":  "lock_shutdown",
+    "skipCooldownDays":  14,
+    "scheduleChangeCooldownDays":  7,
+    "enabled":  true,
+    "watchdogHeartbeatFreshSeconds":  120,
+    "lockCheckSeconds":  10,
+    "loggingEnabled":  true
+}

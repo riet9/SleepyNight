@@ -1,0 +1,27 @@
+﻿# Build output
+bin/
+obj/
+dist/
+
+# Local SDK / package caches
+.nuget/
+.dotnet-cli/
+.appdata/
+.localappdata/
+.userprofile/
+Microsoft/
+NuGet/
+
+# Runtime state
+sleepy-night.log
+sleepy-night-state.json
+sleepy-night-status.json
+
+# User / IDE files
+*.user
+*.suo
+*.cache
+*.pdb
+
+# Temporary / local helper files
+_codex_write_test.txt
